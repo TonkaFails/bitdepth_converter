@@ -1,0 +1,42 @@
+.app, .text, .form
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &.app
+        justify-content: space-evenly
+        color: #F5EBEB
+        background: #393E46
+        height: 100vh
+        width: 100vw
+
+    .title, .types, .custom-file-upload, #clear-button, input[type='submit']
+        font-size: 2vh
+        border: 2px solid #222831
+        border-radius: 8px
+        background: #222831
+        padding: 10px
+        color: #F5EBEB
+
+        &.title
+            font-size: 6vh
+            padding: 20px
+
+        &.types
+            border-radius: 0
+
+    #file-upload, #convert-button, .custom-file-upload, #clear-button
+        font-size: 2vh
+
+        &.custom-file-upload, input[type='submit'], &#clear-button, &#convert-button
+            border: none
+            background-color: #222831
+
+            &:hover
+                background-color: #00ADB5
+
+        &:disabled
+            visibility: hidden
+
+    #file-upload
+        display: none

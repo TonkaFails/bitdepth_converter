@@ -1,10 +1,43 @@
-.app {
-    display: flex;
-    color: white;
-    background: black;
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.app, .text, .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+.app.app, .text.app, .form.app {
+  justify-content: space-evenly;
+  color: #F5EBEB;
+  background: #393E46;
+  height: 100vh;
+  width: 100vw;
+}
+.app .title, .app .types, .app .custom-file-upload, .app #clear-button, .app input[type=submit], .text .title, .text .types, .text .custom-file-upload, .text #clear-button, .text input[type=submit], .form .title, .form .types, .form .custom-file-upload, .form #clear-button, .form input[type=submit] {
+  font-size: 2vh;
+  border: 2px solid #222831;
+  border-radius: 8px;
+  background: #222831;
+  padding: 10px;
+  color: #F5EBEB;
+}
+.app .title.title, .app .types.title, .app .custom-file-upload.title, .app #clear-button.title, .app input[type=submit].title, .text .title.title, .text .types.title, .text .custom-file-upload.title, .text #clear-button.title, .text input[type=submit].title, .form .title.title, .form .types.title, .form .custom-file-upload.title, .form #clear-button.title, .form input[type=submit].title {
+  font-size: 6vh;
+  padding: 20px;
+}
+.app .title.types, .app .types.types, .app .custom-file-upload.types, .app #clear-button.types, .app input[type=submit].types, .text .title.types, .text .types.types, .text .custom-file-upload.types, .text #clear-button.types, .text input[type=submit].types, .form .title.types, .form .types.types, .form .custom-file-upload.types, .form #clear-button.types, .form input[type=submit].types {
+  border-radius: 0;
+}
+.app #file-upload, .app #convert-button, .app .custom-file-upload, .app #clear-button, .text #file-upload, .text #convert-button, .text .custom-file-upload, .text #clear-button, .form #file-upload, .form #convert-button, .form .custom-file-upload, .form #clear-button {
+  font-size: 2vh;
+}
+.app #file-upload.custom-file-upload, .app #file-upload input[type=submit], .app #file-upload#clear-button, .app #file-upload#convert-button, .app #convert-button.custom-file-upload, .app #convert-button input[type=submit], .app #convert-button#clear-button, .app #convert-button#convert-button, .app .custom-file-upload.custom-file-upload, .app .custom-file-upload input[type=submit], .app .custom-file-upload#clear-button, .app .custom-file-upload#convert-button, .app #clear-button.custom-file-upload, .app #clear-button input[type=submit], .app #clear-button#clear-button, .app #clear-button#convert-button, .text #file-upload.custom-file-upload, .text #file-upload input[type=submit], .text #file-upload#clear-button, .text #file-upload#convert-button, .text #convert-button.custom-file-upload, .text #convert-button input[type=submit], .text #convert-button#clear-button, .text #convert-button#convert-button, .text .custom-file-upload.custom-file-upload, .text .custom-file-upload input[type=submit], .text .custom-file-upload#clear-button, .text .custom-file-upload#convert-button, .text #clear-button.custom-file-upload, .text #clear-button input[type=submit], .text #clear-button#clear-button, .text #clear-button#convert-button, .form #file-upload.custom-file-upload, .form #file-upload input[type=submit], .form #file-upload#clear-button, .form #file-upload#convert-button, .form #convert-button.custom-file-upload, .form #convert-button input[type=submit], .form #convert-button#clear-button, .form #convert-button#convert-button, .form .custom-file-upload.custom-file-upload, .form .custom-file-upload input[type=submit], .form .custom-file-upload#clear-button, .form .custom-file-upload#convert-button, .form #clear-button.custom-file-upload, .form #clear-button input[type=submit], .form #clear-button#clear-button, .form #clear-button#convert-button {
+  border: none;
+  background-color: #222831;
+}
+.app #file-upload.custom-file-upload:hover, .app #file-upload input[type=submit]:hover, .app #file-upload#clear-button:hover, .app #file-upload#convert-button:hover, .app #convert-button.custom-file-upload:hover, .app #convert-button input[type=submit]:hover, .app #convert-button#clear-button:hover, .app #convert-button#convert-button:hover, .app .custom-file-upload.custom-file-upload:hover, .app .custom-file-upload input[type=submit]:hover, .app .custom-file-upload#clear-button:hover, .app .custom-file-upload#convert-button:hover, .app #clear-button.custom-file-upload:hover, .app #clear-button input[type=submit]:hover, .app #clear-button#clear-button:hover, .app #clear-button#convert-button:hover, .text #file-upload.custom-file-upload:hover, .text #file-upload input[type=submit]:hover, .text #file-upload#clear-button:hover, .text #file-upload#convert-button:hover, .text #convert-button.custom-file-upload:hover, .text #convert-button input[type=submit]:hover, .text #convert-button#clear-button:hover, .text #convert-button#convert-button:hover, .text .custom-file-upload.custom-file-upload:hover, .text .custom-file-upload input[type=submit]:hover, .text .custom-file-upload#clear-button:hover, .text .custom-file-upload#convert-button:hover, .text #clear-button.custom-file-upload:hover, .text #clear-button input[type=submit]:hover, .text #clear-button#clear-button:hover, .text #clear-button#convert-button:hover, .form #file-upload.custom-file-upload:hover, .form #file-upload input[type=submit]:hover, .form #file-upload#clear-button:hover, .form #file-upload#convert-button:hover, .form #convert-button.custom-file-upload:hover, .form #convert-button input[type=submit]:hover, .form #convert-button#clear-button:hover, .form #convert-button#convert-button:hover, .form .custom-file-upload.custom-file-upload:hover, .form .custom-file-upload input[type=submit]:hover, .form .custom-file-upload#clear-button:hover, .form .custom-file-upload#convert-button:hover, .form #clear-button.custom-file-upload:hover, .form #clear-button input[type=submit]:hover, .form #clear-button#clear-button:hover, .form #clear-button#convert-button:hover {
+  background-color: #00ADB5;
+}
+.app #file-upload:disabled, .app #convert-button:disabled, .app .custom-file-upload:disabled, .app #clear-button:disabled, .text #file-upload:disabled, .text #convert-button:disabled, .text .custom-file-upload:disabled, .text #clear-button:disabled, .form #file-upload:disabled, .form #convert-button:disabled, .form .custom-file-upload:disabled, .form #clear-button:disabled {
+  visibility: hidden;
+}
+.app #file-upload, .text #file-upload, .form #file-upload {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

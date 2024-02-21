@@ -1,24 +1,46 @@
 <!doctype html>
 <html>
-<head>
+  <head>
     <title>Upload new File</title>
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
-    />
+      href="{{ url_for('static', filename='style.css') }}" />
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-</head>
-<body>
-  <div class="app">
-    <h1>Convert sound file to 16 bit depth</h1>
-    <h4>allowed types: 'wav', 'mp3', 'flac', 'aac'</h4>
-    <form action="" method=post enctype=multipart/form-data>
-      <input type=file name=file>
-      <input type=submit value=convert>
-    </form>
-  </div>
-</body>
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="text">
+        <div class="title">CONVERT SOUND FILE TO 16 BIT DEPTH</div>
+        <div class="types">allowed types: 'wav', 'mp3', 'flac', 'aac'</div>
+      </div>
+      <form action method=post enctype=multipart/form-data class="form">
+        <div class="upload">
+          <label for="file-upload" class="custom-file-upload">Choose file</label>
+          <input id="file-upload" type="file" name="file" onchange="updateLabel()" />
+          <span id="file-chosen">No file</span>
+          <button id="clear-button" onclick="clearFile()" disabled>x</button>
+        </div>
+        <input type="submit" value="CONVERT" disabled id="convert-button">
+      </form>
+    </div>
+  </body>
+  <script>
+    function updateLabel() {
+      var input = document.getElementById('file-upload');
+      var fileName = input.files[0] ? input.files[0].name : '';
+      document.getElementById('file-chosen').textContent = fileName;
+      var submitBtn = document.getElementById('convert-button');
+      submitBtn.disabled = !input.files.length;
+      var clearBtn = document.getElementById('clear-button');
+      clearBtn.disabled = !input.files.length;
+    }
+    function clearFile() {
+      document.getElementById('file-upload').value = '';
+      document.getElementById('file-chosen').textContent = 'No file';
+      document.getElementById('covert-button').disabled = true;
+      document.getElementById('clear-button').disabled = true;
+    }
+  </script>
 </html>
